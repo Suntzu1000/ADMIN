@@ -19,9 +19,13 @@ import {
   useTheme,
 } from "@mui/material";
 
-const Navbar = ({ isSideBarOpen, setIsSideBarOpen }) => {
+const Navbar = ({user, isSideBarOpen, setIsSideBarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
+
+  const [anchorEl, setAnchorEl] = useState(null)
+  const isOpen = Boolean(anchorEl)
+  const handleClick = (event) => setAnchorEl(event.currentTarge)
   return (
     <AppBar
       sx={{
@@ -61,6 +65,13 @@ const Navbar = ({ isSideBarOpen, setIsSideBarOpen }) => {
           <IconButton>
             <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
+
+              <FlexBetween>
+                <Button onClick={handleClick}>
+
+                </Button>
+              </FlexBetween>
+
         </FlexBetween>
       </Toolbar>
     </AppBar>
