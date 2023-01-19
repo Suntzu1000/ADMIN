@@ -18041,14 +18041,14 @@ export const dataAffiliateStat = [
     },
     {
       _id: "63701cc1f03239b7f700000e",
-      name: "Shelly",
-      email: "swelbeck12@ycombinator.com",
+      name: "Gabriel",
+      email: "gabrielfootze@gmail.com",
       password: "RSjzmAjnq",
       city: "Sangoleng",
       state: null,
       country: "ID",
-      occupation: "Pharmacist",
-      phoneNumber: "7036619983",
+      occupation: "Software Engineer",
+      phoneNumber: "62995396918",
       transactions: [
         "63701d74f03239d81e000027",
         "63701d74f032396b8e00002c",
