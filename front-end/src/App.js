@@ -8,6 +8,7 @@ import Layout from "./scenes/layout/Layout"
 import Dashboard from "./scenes/dashboard/Dashboard"
 import Products from "./scenes/products/Products"
 import Customers from "./scenes/customers/Customers"
+import Transactions from "./scenes/transactions/Transactions"
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -23,6 +24,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard/> }/>
             <Route path="/produtos" element={<Products/>}/>
             <Route path="/clientes" element={<Customers/>}/>
+            <Route path="transactions" element={<Transactions/>}/>
           </Route>
         </Routes>
         </BrowserRouter>
