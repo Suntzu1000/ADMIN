@@ -21,39 +21,74 @@ const Transactions = () => {
   });
   const columns = [
     {
-        field: "_id",
-        headerName: "ID",
-        flex: 1,
+      field: "_id",
+      headerName: "ID",
+      flex: 1,
     },
     {
-        field: "userId",
-        headerName: "User ID",
-        flex: 1,
+      field: "userId",
+      headerName: "User ID",
+      flex: 1,
     },
     {
-        field: "createdAt",
-        headerName: "CreateAt",
-        flex: 1,
+      field: "createdAt",
+      headerName: "CreateAt",
+      flex: 1,
     },
     {
-        field: "products",
-        headerName: "Produtos",
-        flex: 0.5,
-        sortable: false,
+      field: "products",
+      headerName: "Produtos",
+      flex: 0.5,
+      sortable: false,
+      renderCell: (params) => params.value.length,
     },
     {
-        field: "occupation",
-        headerName: "Profissão",
-        flex: 1,
+      field: "occupation",
+      headerName: "Profissão",
+      flex: 1,
     },
     {
-        field: "role",
-        headerName: "Cargo",
-        flex: 0.5,
+      field: "cost",
+      headerName: "Preço",
+      flex: 0.5,
+      renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
     },
+  ];
+  return <Box m="1.5rem 2.5rem">
+    <Header title="TRANSAÇÕES" subtitle="Lista completa de transações"/>
+    <Box height="80vh" 
+        sx={{
+            "& .MuiDataGrid-root": {
+                border: "none"
+            },
+            "& .MuiDataGrid-cell": {
+                borderBottom: "none"
+            }, 
+            "& .MuiDataGrid-columnHeaders": {
+                backgroundColor: theme.palette.background.alt,
+                color: theme.palette.secondary[100],
+                borderBottom: "none"
+            },
+            "& .MuiDataGrid-virtual-Scroller": {
+                backgroundColor: theme.palette.primary.light
+            },
+            "& .MuiDataGrid-footerContainer": {
+                backgroundColor: theme.palette.background.alt,
+                color: theme.palette.secondary[100],
+                borderTop: "none"
+            },
+            "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+                color: `${theme.palette.secondary[200]} !importante`
+            }
+            
 
-]
-  return <div>Transactions</div>;
+        }}>
+        <DataGrid
+            loading={isLoading || !data}
+            getRowId={(row) => }
+            />
+    </Box>
+  </Box>;
 };
 
 export default Transactions;
