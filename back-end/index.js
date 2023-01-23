@@ -10,12 +10,17 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
-
 // DADOS IMPORTADOS
-import User from "./models/User.js"
+import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
-import {dataUser, dataProduct, dataProductStat} from "./data/index.js"
+import Transaction from "./models/Transaction.js";
+import {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+} from "./data/index.js";
 
 /*CONFIGURAÇÕES */
 dotenv.config();
@@ -38,14 +43,17 @@ app.use("/sales", salesRoutes);
 const PORT = process.env.PORT || 9000;
 
 mongoose
-.set('strictQuery', true)
-.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => {
-    app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
+  .set("strictQuery", true)
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
     /*ADICIONANDO DADOS APENAS UMA VEZ */
     //Product.insertMany(dataProduct)
     //ProductStat.insertMany(dataProductStat)
+    //Transaction.insertMany(dataTransaction)
     //User.insertMany(dataUser)
-}).catch((error) => console.log(` Não conectado Problema => ${error}`))
+  })
+  .catch((error) => console.log(` Não conectado Problema => ${error}`));
