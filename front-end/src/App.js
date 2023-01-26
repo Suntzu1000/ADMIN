@@ -11,6 +11,9 @@ import Customers from "./scenes/customers/Customers"
 import Transactions from "./scenes/transactions/Transactions"
 import Geography from "./scenes/geography/Geography"
 import Overview from "./scenes/overview/Overview"
+import Daily from "./scenes/daily/Daily"
+import Mensalmente from "./scenes/monthly/Mensalmente";
+import PaginaDetalhamento from "./scenes/breakdown/PaginaDetalhamento";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -29,6 +32,9 @@ function App() {
             <Route path="/transações" element={<Transactions/>}/>
             <Route path="/geografia" element={<Geography/>}/>
             <Route path="/visão geral" element={<Overview/>}/>
+            <Route path="/diariamente" element={<Daily/>}/>
+            <Route path="/mensalmente" element={<Mensalmente/>}/>
+            <Route path="/página de detalhamento" element={<PaginaDetalhamento/>}/>
           </Route>
         </Routes>
         </BrowserRouter>

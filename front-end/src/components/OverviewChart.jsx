@@ -120,7 +120,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
         tickRotation: 0,
         legend: isDashboard
           ? ""
-          : `Total ${view === "sales" ? "Receita" : "Unidades"} por Ano`,
+          : `Total de ${view === "sales" ? "Receita" : "Unidades"} por Ano`,
         legendOffset: -60,
         legendPosition: "middle",
       }}
