@@ -16,14 +16,14 @@ const Overview = () => {
           <InputLabel>Ver</InputLabel>
           <Select
             value={view}
-            label="View"
+            label="Ver"
             onChange={(e) => setView(e.target.value)}
           >
             <MenuItem value="sales">Vendas</MenuItem>
             <MenuItem value="units">Unidades</MenuItem>
           </Select>
         </FormControl>
-        <OverviewChart view={view} />
+       <OverviewChart view={view} />
       </Box>
     </Box>
   );
