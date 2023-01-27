@@ -27,8 +27,8 @@ function App() {
         <CssBaseline />
         <Routes>
           <Route element={<Layout/>}>
-            <Route path="/" element={<Navigate to="dashboard" replace/>}/>
-            <Route path="dashboard" element={<Dashboard/> }/>
+            <Route path="/" element={<Navigate to="administração" replace/>}/>
+            <Route path="/administração" element={<Dashboard/> }/>
             <Route path="/produtos" element={<Products/>}/>
             <Route path="/clientes" element={<Customers/>}/>
             <Route path="/transações" element={<Transactions/>}/>
