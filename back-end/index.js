@@ -55,6 +55,7 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
     /*ADICIONANDO DADOS APENAS UMA VEZ */
+    //AffiliateStat.insertMany(dataAffiliateStat)
     //OverallStat.insertMany(dataOverallStat);
     //Product.insertMany(dataProduct)
     //ProductStat.insertMany(dataProductStat)
