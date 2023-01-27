@@ -36,7 +36,7 @@ function App() {
             <Route path="/diariamente" element={<Daily/>}/>
             <Route path="/mensalmente" element={<Mensalmente/>}/>
             <Route path="/página de detalhamento" element={<PaginaDetalhamento/>}/>
-            <Route path="/admin" elemennt={<Admin/>}/>
+            <Route path="/admin" element={<Admin/>}/>
           </Route>
         </Routes>
         </BrowserRouter>
